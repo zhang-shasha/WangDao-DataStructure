@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <stdlib.h>
-# 
-# define MaxSize 10
+
+# define MaxSize 4
 
 typedef struct{
     int data[MaxSize];
@@ -62,20 +62,36 @@ int DeleteMinElement(SeqList &L,int &e){
     return e;
 }
 
+bool DleteSameElem(SeqList &L,int element){
+    int count = 0;
+    for (int i = 0; i < L.length; i++)
+    {
+        if(L.data[i]!=element){
+            L.data[count]=L.data[i];
+            count++;
+            
+        }
+    }
+    L.length=count;
+    return true;
+    
+}
 int main(){
     SeqList L;
-    int e = -1;
     InitLize(L);
-    ListInsert(L,1,2);
+    ListInsert(L,1,6);
     ListInsert(L,2,5);
-    ListInsert(L,3,6);
-    DeleteMinElement(L,e);
+    ListInsert(L,3,5);
+    ListInsert(L,4,3);
+    DleteSameElem(L,5);
     for (int i = 0; i < L.length+1; i++)
     {
         printf("data[%d] --> %d\n",i,L.data[i]);
     }
-    
-    printf("%d",e);
+    printf("-----------------------------\n");
+     for (int i = 0; i < L.length+1; i++){
+        printf("data[%d] --> %d\n",i,L.data[i]);
+    }
     
     return 0;
 }
