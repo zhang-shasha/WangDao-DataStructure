@@ -19,4 +19,13 @@ bool InitDoubleList(DLinkList &DL,int InitSize){
     DL->next=NULL;
 }
 
+bool isEmpty(DLinkList &DL){
+    if(DL->next==NULL){
+        return true;
+    }
+    return false;
+}
+
+
+
 
