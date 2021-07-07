@@ -10,8 +10,8 @@ typedef struct DNode{
 }DNode,*DLinkList;
 
 //初始化双链表
-bool InitDoubleList(DLinkList &DL,int InitSize){
-    DL=(DNode *)malloc(sizeof(DNode)*InitSize);
+bool InitDoubleList(DLinkList &DL){
+    DL=(DNode *)malloc(sizeof(DNode));
     if(DL==NULL){
         printf("内存不足");
         return false;
