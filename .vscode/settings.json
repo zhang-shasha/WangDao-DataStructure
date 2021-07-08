@@ -10,6 +10,13 @@
     "new": "cpp",
     "ostream": "cpp",
     "functional": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "*.tcc": "cpp",
+    "streambuf": "cpp",
+    "array": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "limits": "cpp",
+    "tuple": "cpp"
   }
 }
