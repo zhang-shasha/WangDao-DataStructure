@@ -217,14 +217,15 @@ LinkList ListHeadInsert(LinkList &L){
     
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
+
     LinkList L;
     // int e;
     // InitListWithHeadNode(L);
     // ListInsertWithHeadNode(L,1,2);
     // LinkListDelete(L,1,e);
-    ListTailInsert(L);
+    InitListWithHeadNode(L);
+    ListHeadInsert(L);
 
     return 0;
 }
